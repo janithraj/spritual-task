@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cont1{
+     /* border: 1px solid black; */
+     height: 300px;
+     width: 400px;
+     margin-left: 300px;
+     margin-top: 200px;
+   background-color: aquamarine;
+        }
+        #cont2{
+     /* border: 1px solid black; */
+     height: 300px;
+     width: 400px;
+      margin-left: 300px;
+     margin-top: 200px; 
+     color: rgb(59, 57, 57);
+     background-color: bisque;
+    
+
+        }
+        h1{
+            text-align: center;
+        }
+        input{
+   
+            height: 70px;
+            width: 200px;
+            margin-left: 60px;
+            font-size:larger;
+            /* color: gray; */
+        background-color: beige;
+        }
+        button{
+
+            height:30px;
+            width: 100px;
+            color: brown;
+            background-color: blanchedalmond;
+            border-radius: 10px;
+            margin-left: 100px;
+            margin-top: 60px;
+            border: none;
+
+
+        }
+        button:hover{
+     
+         font-size: larger;
+
+        }
+#total{
+    display: flex;
+}
+#btn1{
+
+    margin-left: 800px;
+}
+
+    </style>
+</head>
+<body>
+<div id="total">
+
+    <div id="cont1">
+    <h1>ENTER YOUR INPUT </h1>
+    <input type="text" id="input1"> <br>
+    <button onclick="submit()">submit</button>
+
+</div>
+<div id="cont2">
+
+
+</div>
+
+</div>
+<button id="btn1"> log out</button>
+
+
+<script>
+    document.getElementById("btn1").addEventListener("click",()=>{
+    document.location.href="/uipage.html"
+})
+function submit(){
+    
+let input1=document.getElementById("input1").value;
+let cont2=document.getElementById("cont2");
+cont2.setAttribute("style","font-size:30px;");
+
+var ans = eval(input1);
+cont2.innerHTML=ans;
+
+
+
+
+function zero(func) {
+  return func ? func(0) : 0;
+}
+
+function one(func) {
+  return func ? func(1) : 1;
+}
+
+function two(func) {
+  return func ? func(2) : 2;
+}
+
+function three(func) {
+  return func ? func(3) : 3;
+}
+
+function four(func) {
+  return func ? func(4) : 4;
+}
+
+function five(func) {
+  return func ? func(5) : 5;
+}
+
+function six(func) {
+  return func ? func(6) : 6;
+}
+
+function seven(func) {
+  return func ? func(7) : 7;
+}
+
+function eight(func) {
+  return func ? func(8) : 8;
+}
+
+function nine(func) {
+  return func ? func(9) : 9;
+}
+
+function plus(num) {
+  return function(value) {
+    return value + num;
+  };
+}
+
+function minus(num) {
+  return function(value) {
+    return value - num;
+  };
+}
+
+function times(num) {
+  return function(value) {
+    return value * num;
+  };
+}
+
+function divided_by(num) {
+  return function(value) {
+    return Math.floor(value / num);
+  };
+}
+
+console.log(seven(times(five()))); // must return 35
+console.log(four(plus(nine()))); // must return 13
+console.log(eight(minus(three()))); // must return 5
+console.log(six(divided_by(two()))); // must return 3
+console.log(eight(divided_by(three()))); // must return 2
+
+}
+
+
+</script>
+</body>
+</html>

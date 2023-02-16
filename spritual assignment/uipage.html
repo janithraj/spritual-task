@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* background-image:u; */
+        }
+        /* #content1{
+            border: 1px solid black;
+        } */
+        #content2{
+            border: 1px solid black;
+            line-height: 80px;
+            height:300px;
+            width: 500px;
+            margin-left: 300px;
+            margin-top: 200px;
+          background-color: rgb(141, 221, 183);
+        }
+        label,input{
+            padding-left: 60px;
+            color: brown;
+            
+        }
+        label{
+            font-family: sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+        }
+        input{
+            height: 30px;
+            font-size: 15px;
+            border-color: none;
+        }
+        input:focus{
+
+            background-color: burlywood;
+        }
+        form{
+            /* padding-top: 100px; */
+        }
+        
+     #btn{
+        height: 40px;
+        width: 400px;
+        margin-left: 50px;
+        background-color: rgb(133, 133, 239);
+        font-family: sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+        color: white; 
+     }
+     #btn:hover{
+        height: 50px;
+        width: 410px;
+     }
+    
+
+    </style>
+</head>
+<body id="body">
+    <!-- <div id="content1"> -->
+  <div id="content2">
+<!-- <form action="" > -->
+    <label for="type">USERNAME:</label>
+    <input type="text" placeholder="enter your username" id="input1" value="student@login.com"> <br>
+    <label for="type">PASSWORD:</label>
+    <input type="password" placeholder="enter your password" id="input2" value="Student"><br>
+
+    <button id="btn" type="button" >sign in</button>
+
+<!-- </form> -->
+
+
+  </div>
+
+    <!-- </div> -->
+  <script>
+    document.getElementById("btn").addEventListener("click",()=>{
+        
+        let input1=document.getElementById("input1").value;
+        let input2=document.getElementById("input2").value;
+    //  let span=document.createElement("span");
+    //   span.textContent="error";
+
+     if(input1 =="student@login.com" && input2 =="Student"){
+    //   input1.style.borderColor="green";
+    //   input2.style.borderColor="green";
+    //   input1.textContent=span;
+    //    let a=document.createElement("a");
+    //    a.href="/solutionpage.html";
+    //    a.textContent=btn;
+    //    btn.appendChild(a);
+    document.location.href="/solutionpage.html"
+    }
+      else if(input1=="" && input2 =="" ){
+         input1.style.borderColor="red";
+      }
+      else{
+        document.getElementById("body").style.backgroundColor="black"
+    }
+       
+    })
+    
+    function sol(){
+     let input1=document.getElementById("input1").value;
+     let input2=document.getElementById("input2").value;
+     let btn=document.getElementById("btn");
+     
+    //  let span=document.createElement("span");
+    //   span.textContent="error";
+
+     if(input1 =="student@login.com" && input2 =="Student"){
+      input1.style.borderColor="green";
+      input2.style.borderColor="green";
+    //   input1.textContent=span;
+       let a=document.createElement("a");
+       a.href="/solutionpage.html";
+       a.textContent="hi";
+       btn.appendChild(a);
+
+       
+    //   document.location.href="";
+    // document.location.href="/solutionpage.html";
+     }
+      else if(input1=="" && input2 =="" ){
+         input1.style.borderColor="red";
+      }
+
+    
+    
+    }
+  </script>  
+</body>
+</html>
